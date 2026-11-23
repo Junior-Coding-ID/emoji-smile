@@ -1,17 +1,13 @@
-// One Emoji, One Smile — v1: a sun with a face.
-// The entry is exactly one emoji: U+1F31E SUN WITH FACE.
-// One character, 4 bytes in UTF-8. No trailing newline.
 import { mkdirSync, writeFileSync } from "node:fs";
 
 const EMOJI = "🌞";
 
-// Why this one: a smiling sun reads warm and friendly at first glance,
-// is understood the same way by a stranger of any age, and carries no
-// intimacy, sarcasm or flirtation — and it is a more deliberate pick
-// than the plain default smiley.
+// Satu matahari berwajah: hangat dan ceria buat orang asing tanpa
+// perlu konteks, tanpa kesan intim — senyum yang universal.
 
+// Guard: entry harus tepat satu emoji, satu karakter.
 if ([...EMOJI].length !== 1) {
-  throw new Error("entry must be exactly one emoji");
+  throw new Error("entry harus tepat satu emoji");
 }
 
 mkdirSync("/output", { recursive: true });
